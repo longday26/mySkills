@@ -26,3 +26,7 @@
 	path = voltagent_awesome_design_md
 	url = https://github.com/VoltAgent/awesome-design-md.git
 	branch = main
+[submodule "longbridge_nsh"]
+	path = longbridge_nsh
+	url = https://github.com/longbridge/nsh.git
+	branch = main
