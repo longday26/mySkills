@@ -30,3 +30,7 @@
 	path = longbridge_nsh
 	url = https://github.com/longbridge/nsh.git
 	branch = main
+[submodule "googlechrome_modern_web_guidance"]
+	path = googlechrome_modern_web_guidance
+	url = https://github.com/GoogleChrome/modern-web-guidance.git
+	branch = main
