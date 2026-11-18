@@ -18,9 +18,9 @@
 | `googlechrome_modern_web_guidance` | GoogleChrome/modern-web-guidance | 2 | 现代 Web 指南、Chrome 扩展 |
 | `agents365_ai_drawio_skill` | Agents365-ai/drawio-skill | 1 | Draw.io 绘图 |
 | `cathrynlavery_diagram_design` | cathrynlavery/diagram-design | 1 | 架构图 / 流程图等图形设计 |
-| `voltagent_awesome_design_md` | VoltAgent/awesome-design-md | — | 设计参考（167 份按品牌 / 站点整理的 Markdown），**不含 `SKILL.md`**，不参与链接 |
+| `voltagent_awesome_design_md` | VoltAgent/awesome-design-md | — | 84 份按站点整理的 `DESIGN.md` 设计系统，**不含 `SKILL.md`**，不参与链接 |
 
-共 75 个可挂载 skill。判断标准：**目录内有 `SKILL.md` 即为一个 skill，目录名即 skill 名**；上游可能带二级分类（如 `mattpocock_skills/skills/engineering/<skill>`），扫描 2 层足够。
+子模块内共 75 个可挂载 skill，另有 1 个本地索引 skill（`skills/ai-content-index`）。判断标准：**目录内有 `SKILL.md` 即为一个 skill，目录名即 skill 名**；上游可能带二级分类（如 `mattpocock_skills/skills/engineering/<skill>`），扫描 2 层足够。
 
 ```text
 mySkills/
@@ -29,6 +29,7 @@ mySkills/
 │   ├── add-submodule.yml         # 手动触发：按仓库地址新增子模块
 │   └── tmp-task.yml              # 一次性修复脚本（历史遗留）
 ├── <子模块>/skills/[<分类>/]<skill>/SKILL.md
+├── skills/ai-content-index/      # 本地索引 skill（非子模块）
 ├── .gitmodules
 └── README.md
 ```
@@ -82,6 +83,8 @@ git submodule add -b main https://github.com/<owner>/<repo>.git <本地目录名
 | Claude Code | `%USERPROFILE%\.claude\skills` | `~/.claude/skills` |
 
 用链接而非复制，上游更新后 skill 自动同步。Windows 建 Junction 需开启「系统 → 开发者模式」或以管理员身份运行。
+
+下面的脚本按 `.gitmodules` 扫描子模块；根目录 `skills/` 下的本地 skill（如 `ai-content-index`）不在其中，需单独建链接。
 
 ### Windows PowerShell
 
