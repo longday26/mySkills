@@ -34,3 +34,7 @@
 	path = googlechrome_modern_web_guidance
 	url = https://github.com/GoogleChrome/modern-web-guidance.git
 	branch = main
+[submodule "morganlinton_beautifulrust"]
+	path = morganlinton_beautifulrust
+	url = https://github.com/morganlinton/BeautifulRust.git
+	branch = main
